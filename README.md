@@ -3,7 +3,7 @@ El repositorio actual contiene el desarrollo de los items definidos por la empre
 
 1-. Con respecto a la primera sección del documento presentado:
 1.1-. Se diseño un modelo de datos acorde a las especificaciones indicadas.
-1.2-. El modelo de datos se encuentra en un archivo de imagen en formato ".jpg"
+1.2-. El modelo de datos se encuentra en un archivo de imagen en formato ".png"
 1.3-. El respaldo de la base de datos diseñada se encuentra en el archivo "db.sql"
 1.4-. Se implementaron las 3 consultas especificadas, y su respaldo se encuentra en el archivo "querys.sql".
 
