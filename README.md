@@ -21,7 +21,7 @@ El repositorio actual contiene el desarrollo de los items definidos por la empre
  * Editar colegio/profesor
  * Eliminar colegio/profesor
  
-2.4-. Las rutas del projecto son las siguientes
+2.4-. Las rutas del proyecto son las siguientes
 /
 /mantenedor/colegio
 /mantenedor/colegio/add
@@ -34,5 +34,8 @@ El repositorio actual contiene el desarrollo de los items definidos por la empre
 /mantenedor/profesor/edited
 /mantenedor/profesor/delete
 
-
+3-. Para ejecutar el proyecto en otro ambiente, considerar lo siguiente:
+3.1- Se debe editar el archivo application.properties para ajustar los datos propios para configurar el acceso a la base de datos
+3.1.1- Se debe editar el archivo profesorDAO.java, especificamente en la función DataSource. Replicar la data del paso 3.1.
+3.1.2- Se debe editar el archivo coleioDAO.java, especificamente en la función DataSource. Replicar la data del paso 3.1.
 
