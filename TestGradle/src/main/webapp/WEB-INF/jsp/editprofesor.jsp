@@ -31,8 +31,15 @@
 								<input id="nombre" name="nombre" type="text" value = "<c:out value="${profesor.nombre}"></c:out>"></input>
 							</span>
 							<span>
-								<input id="activehidden" name="activo" type='hidden' value="0">
-								<input id="activo" name="activo" type='checkbox' value = "<c:out value="${profesor.activo}"></c:out>" checked>
+							<input id="activohidden" name="activo" type="hidden" value="0"></input>
+							<c:set var = "activo" scope = "session" value = "${profesor.activo}"/>
+								<c:if test = "${activo == 1}">
+									<input id="activo" name="activo" type="checkbox" value = "<c:out value="${profesor.activo}"></c:out>" checked></input>
+								</c:if>
+								<c:if test = "${activo == 0}">
+									<input id="activo" name="activo" type="checkbox" value = "<c:out value="${profesor.activo}"></c:out>"></input>
+								</c:if>
+		
 								<label>Activo</label>
 							</span>					
 						</br>
@@ -67,7 +74,7 @@
 							</span>
 						</br>
 						</br>					
-						<button type="reset">Limpiar</button><button type="submit">Guardar</button>
+						<button type="reset">Limpiar</button><button id="submit" name="submit" type="submit">Guardar</button>
 					</table>
 				</c:forEach>				
 			</form>
@@ -75,10 +82,16 @@
 		</br>
 		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 		<script>
-		$('#activo').on('change', function(){
+		$('#activo').on('change', function () {
 			this.value = this.checked ? 1 : 0;
-			//alert(this.value);
-		}).change();
+		 }).change();
+
+		$("#submit").click(function () {
+			if(document.getElementById("activo").checked){
+				document.getElementById('activohidden').disabled = true;
+			}
+		});
+				
 		</script>			
     </body>
 </html>

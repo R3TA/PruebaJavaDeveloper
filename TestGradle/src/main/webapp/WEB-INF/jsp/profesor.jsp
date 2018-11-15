@@ -23,7 +23,7 @@
 						<input id="nombre" name="nombre" type="text" required></input>
 					</span>
 					<span>
-						<input id="activehidden" name="activo" type='hidden' value="0">
+						<input id="activohidden" name="activo" type='hidden' value="0">
 						<input id="activo" name="activo" type='checkbox' value="1" required>
 						<label>Activo</label>
 					</span>					
@@ -57,7 +57,7 @@
 					</span>
 				</br>
 				</br>					
-				<button type="reset">Limpiar</button><button type="submit">Guardar</button>
+				<button type="reset">Limpiar</button><button id="submit" name="submit" type="submit">Guardar</button>
 			</form>
 		</div>
 		</br>
@@ -89,13 +89,17 @@
 				</tbody>
 			</table>
 		</div>
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script>
+			$('#activo').on('change', function () {
+				this.value = this.checked ? 1 : 0;
+			 }).change();
 
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script>
-		$('#activo').on('change', function(){
-			this.value = this.checked ? 1 : 0;
-			//alert(this.value);
-		}).change();
-	</script>	
+			$("#submit").click(function () {
+				if(document.getElementById("activo").checked){
+					document.getElementById('activohidden').disabled = true;
+				}
+			});				
+		</script>	
     </body>
 </html>
