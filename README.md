@@ -22,7 +22,7 @@ El repositorio actual contiene el desarrollo de los items definidos por la empre
  * Editar colegio/profesor
  * Eliminar colegio/profesor
  
-2.4-. Las rutas del proyecto son las siguientes
+2.4-. Las rutas del proyecto son las siguientes:
 /
 /mantenedor/colegio
 /mantenedor/colegio/add
